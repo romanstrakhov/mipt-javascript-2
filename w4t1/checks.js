@@ -53,9 +53,13 @@ var friends = [
 // Выполняем выборку и фильтрацию с помощью нашего конструктора
 var result = lib.query(
     friends,
-    lib.select('name', 'gender', 'email'),
+    lib.select('name', 'gender', 'email', 'hnya'),
     lib.filterIn('favoriteFruit', ['Яблоко', 'Картофель'])
 );
+
+// console.log ("[#] result = ");
+console.log (result);
+
 
 // Сравниваем полученный результат с ожидаемым
 assert.deepEqual(result, [
